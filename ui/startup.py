@@ -125,7 +125,7 @@ def restart():
     # set status down
     with open('/var/lib/rancher/turnkey/status', 'w') as f:
         f.write('down')
-    return render_template('project-info.html', message="<br>After a few minutes, you can login to this device with ssh to the host <b>raspberrypi</b>. <br></p><li>user:pi</li> <br><li>password:raspberry</li><br>Once logged in, you will find your kubeconfig file is available at <code>/home/pi/.kube/config</code>")
+    return render_template('project-info.html', message="<br>After a few minutes, you can login to this device with ssh to the host <b>raspberrypi</b>. <br></p><li>user:&nbsp;<b>pi</b></li> <br><li>password:&nbsp;<b>raspberry</b></li><br>Once logged in, you will find your kubeconfig file is available at <code>/home/pi/.kube/config</code>")
 
 def runapp():
     app.run(host="0.0.0.0", port=80, threaded=True)
